@@ -10,7 +10,7 @@ import { TaskDataService } from 'src/app/services/task-data.service';
 export class ContentsComponent implements OnInit {
   @Input('tickets') tickets;
   progressStatus = new FormControl('');
-  allStatus: Object;
+  allStatus: any;
   constructor(
     private taskDataService: TaskDataService
   ) { }
@@ -29,12 +29,10 @@ export class ContentsComponent implements OnInit {
   }
 
   changeStatus = (statusId, ticketId) => {
-    console.log('getStatus Error:- ', statusId, ticketId);
     this.taskDataService.changeStatus(statusId, ticketId).subscribe(data => {
-      console.log('Data : - ', data);
-      this.allStatus = data;
+      // this.allStatus = data;
     }, error => {
-      console.log('getStatus Error:- ', error);
+      console.log('changeStatus Error:- ', error);
     });
   }
 }

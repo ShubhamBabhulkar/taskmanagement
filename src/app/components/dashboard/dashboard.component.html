@@ -12,7 +12,7 @@
         </span>
             <span class="margin-left-1rem"><b>{{user.name}}</b></span>    
         </div>
-        <b><hr></b>
+        <hr>
         <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4"  (selectedTabChange)="getTickets($event)">
             <mat-tab label="Tasks({{tasks.length}})">
                 <app-contents [tickets]="tasks"></app-contents>

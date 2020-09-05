@@ -19,14 +19,14 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus ligula quis sapien ullamcorper viverra.",
       "assignee": 1,
       "type": 1,
-      "status": 1
+      "status": 2
     },
     {
       "id": 3,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus ligula quis sapien ullamcorper viverra.",
       "assignee": 1,
       "type": 1,
-      "status": 1
+      "status": 3
     },
     {
       "id": 4,

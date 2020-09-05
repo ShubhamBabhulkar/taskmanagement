@@ -1,4 +1,4 @@
-<div class="display-in-flex" *ngFor="let ticket of tickets">
+<div class="display-in-flex border-bottom" *ngFor="let ticket of tickets">
     <span class="material-icons" *ngIf="ticket.type === 1" [ngClass]="{'red-color': ticket.status === 3, 'blue-color': ticket.status === 2, 'green-color': ticket.status === 1}">
         fiber_manual_record
     </span>
