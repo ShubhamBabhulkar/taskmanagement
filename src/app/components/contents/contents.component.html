@@ -1,0 +1,20 @@
+<div class="display-in-flex" *ngFor="let ticket of tickets">
+    <span class="material-icons" *ngIf="ticket.type === 1" [ngClass]="{'red-color': ticket.status === 3, 'blue-color': ticket.status === 2, 'green-color': ticket.status === 1}">
+        fiber_manual_record
+    </span>
+    <span class="material-icons" *ngIf="ticket.type === 2" [ngClass]="{'red-color': ticket.status === 3, 'blue-color': ticket.status === 2, 'green-color': ticket.status === 1}">
+            stop
+    </span>
+    <span class="col-md-11">
+        {{ticket.description}}
+    </span>
+    <span class="col-md-1">
+        <mat-form-field class="green-bgcolor">
+            <mat-select [(value)]="ticket.status" (selectionChange)="changeStatus($event.value, ticket.id)" [ngClass]="{'bgred-color': ticket.status === 3, 'bgblue-color': ticket.status === 2, 'bggreen-color': ticket.status === 1}">
+                <mat-option *ngFor="let status of allStatus" [value]="status.id" class="white-color">
+                    {{status.friendlyName}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </span>
+</div>
