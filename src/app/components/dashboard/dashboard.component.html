@@ -7,26 +7,26 @@
 <div class="row">
     <mat-card>
         <div class="col-md-12 display-in-flex">
-        <span class="material-icons">
+        <span class="material-icons" [ngClass]="{'red-color': user.status === 3, 'blue-color': user.status === 2, 'green-color': user.status === 1}">
             person
         </span>
             <span class="margin-left-1rem"><b>{{user.name}}</b></span>    
         </div>
         <hr>
-        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4"  (selectedTabChange)="getTickets($event)">
-            <mat-tab label="Tasks({{tasks.length}})">
+        <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z0" (click)="getTickets($event)">
+            <mat-tab label="Tasks ({{tasks.length}})" (click)="getTickets('task')">
                 <app-contents [tickets]="tasks"></app-contents>
             </mat-tab>
-            <mat-tab label="Bugs({{bugs.length}})">
+            <mat-tab label="Bugs ({{bugs.length}})" (click)="getTickets('bugs')">
                 <app-contents [tickets]="bugs"></app-contents>
             </mat-tab>
-            <mat-tab label="Completed({{completeds.length}})"> 
+            <mat-tab label="Completed ({{completeds.length}})" (click)="getTickets('completeds')"> 
                     <app-contents [tickets]="completeds"></app-contents>
             </mat-tab>
-            <mat-tab label="In Progress({{inprogress.length}})"> 
+            <mat-tab label="In Progress ({{inprogress.length}})" (click)="getTickets('inprogress')"> 
                     <app-contents [tickets]="inprogress"></app-contents>
             </mat-tab>
-            <mat-tab label="Not Started({{notStarted.length}})">
+            <mat-tab label="Not Started ({{notStarted.length}})" (click)="getTickets('notStarted')">
                     <app-contents [tickets]="notStarted"></app-contents>
             </mat-tab>
         </mat-tab-group>

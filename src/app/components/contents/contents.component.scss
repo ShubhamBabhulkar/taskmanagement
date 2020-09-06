@@ -1,48 +1,35 @@
-.red-color{
-    color: red;
-}
-.blue-color{
-    color: blue;
-}
-.green-color{
-    color: green;
-}
+
 .bgred-color{
-    background-color: red;
-    color: white;
+    background-color: #ff4d4f;
 }
 .bgblue-color{
-    background-color: blue;
+    background-color: #1890ff;
 }
 .bggreen-color{
-    background-color: green;
+    background-color: #52c41a;
 }
-// .white-color{
-//     color: white;
-// }
-// .green-bgcolor{
-//     background-color: green;
-// }
+.border-radius-dropdown{
+    border-radius: 9px;
+}
  .mat-paginator-icon{
     background-color: yellow;
   }
   
    .mat-select-panel {
-      background-color: red;
+      background-color: #ff4d4f;
   }
-  
    .mat-form-field-infix{
-       background-color: red;
+       background-color: #ff4d4f;
   }
-  
-//    .mat-select{
-//      background-color: green;
-//   }
-  
-   .mat-select-value{
-     color: white;
-  }
-  
+
    .mat-form-field-type-mat-select .mat-form-field-label {
     color: white;
   }
+
+  .padding-1rem-3rem{
+    padding: 0.5rem 3rem 0rem 3rem;
+  }
+  .display-inline-flex{
+    display: inline-flex;
+  }
+  

@@ -79,7 +79,7 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  getTickets = (type) => {
-    console.log(type.tab.textLabel);
+  getTickets = (selectedTab) => {
+    console.log(selectedTab);
   }
 }

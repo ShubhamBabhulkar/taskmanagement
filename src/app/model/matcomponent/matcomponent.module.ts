@@ -10,6 +10,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   exports: [
@@ -22,7 +23,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatGridListModule,
     MatIconModule,
     MatDividerModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSidenavModule
   ]
 })
 export class MatcomponentModule { }

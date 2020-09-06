@@ -1,16 +1,18 @@
-<div class="display-in-flex border-bottom" *ngFor="let ticket of tickets">
+<div class="row display-in-flex border-bottom padding-1rem-3rem" *ngFor="let ticket of tickets">
+    <div class="col-md-10 display-inline-flex">
     <span class="material-icons" *ngIf="ticket.type === 1" [ngClass]="{'red-color': ticket.status === 3, 'blue-color': ticket.status === 2, 'green-color': ticket.status === 1}">
         fiber_manual_record
     </span>
     <span class="material-icons" *ngIf="ticket.type === 2" [ngClass]="{'red-color': ticket.status === 3, 'blue-color': ticket.status === 2, 'green-color': ticket.status === 1}">
-            stop
+        stop
     </span>
-    <span class="col-md-11">
+    <span class="margin-left-1rem">
         {{ticket.description}}
     </span>
+    </div>
     <span class="col-md-1">
         <mat-form-field class="green-bgcolor">
-            <mat-select [(value)]="ticket.status" (selectionChange)="changeStatus($event.value, ticket.id)" [ngClass]="{'bgred-color': ticket.status === 3, 'bgblue-color': ticket.status === 2, 'bggreen-color': ticket.status === 1}">
+            <mat-select [(value)]="ticket.status" (selectionChange)="changeStatus($event.value, ticket.id)" class="border-radius-dropdown" [ngClass]="{'bgred-color': ticket.status === 3, 'bgblue-color': ticket.status === 2, 'bggreen-color': ticket.status === 1}">
                 <mat-option *ngFor="let status of allStatus" [value]="status.id" class="white-color">
                     {{status.friendlyName}}
                 </mat-option>

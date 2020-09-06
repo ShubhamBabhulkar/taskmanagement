@@ -1,5 +1,14 @@
 <app-nav-bar></app-nav-bar>
 <div class="wrapped-body">
-    <router-outlet></router-outlet>
+
+<mat-sidenav-container class="example-container">
+        <mat-sidenav mode="side" opened>
+                <span class="material-icons padding-1rem bg-white color-group">
+                groups
+                </span>
+        </mat-sidenav>
+        <mat-sidenav-content><router-outlet></router-outlet></mat-sidenav-content>
+</mat-sidenav-container>
+   
 </div>
 <!-- <mat-card>Simple card</mat-card> -->

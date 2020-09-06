@@ -1,12 +1,18 @@
 mat-card{
     // height: 90vh;
     width: 100vw;
+    padding-left: 3rem;
+    padding-right: 3rem;
     // overflow-x: hidden;
     // overflow-y: auto;
 }
 hr{
-    border: 1px solid black;
+    border: 0.1px solid black;
 }
 mat-tab{
     color: black;
+}
+mat-tab-group{
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
