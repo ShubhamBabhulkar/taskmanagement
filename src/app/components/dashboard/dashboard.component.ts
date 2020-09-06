@@ -39,6 +39,12 @@ export class DashboardComponent implements OnInit {
     });
   }
 
+  getAllTickets = (value) => {
+    this.getCompletedTicks(this.user['id']);
+    this.getInprogressTicks(this.user['id']);
+    this.getNotStartedTicks(this.user['id']);
+  }
+
   getTasks = (userId) => {
     this.taskDataService.getTasks(userId).subscribe(tasks => {
       this.tasks = tasks;

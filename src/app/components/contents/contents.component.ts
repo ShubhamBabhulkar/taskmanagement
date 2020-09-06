@@ -1,5 +1,5 @@
 import { FormControl } from '@angular/forms';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TaskDataService } from 'src/app/services/task-data.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { TaskDataService } from 'src/app/services/task-data.service';
 })
 export class ContentsComponent implements OnInit {
   @Input('tickets') tickets;
+  @Output() statusChange = new EventEmitter();
+
   progressStatus = new FormControl('');
   allStatus: any;
   constructor(
@@ -31,6 +33,7 @@ export class ContentsComponent implements OnInit {
   changeStatus = (statusId, ticketId) => {
     this.taskDataService.changeStatus(statusId, ticketId).subscribe(data => {
       // this.allStatus = data;
+      this.statusChange.emit(statusId);
     }, error => {
       console.log('changeStatus Error:- ', error);
     });
